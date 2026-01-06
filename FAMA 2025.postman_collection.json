@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "1d7c0434-b761-4420-9e0b-5d6c1f24c690",
+		"name": "FAMA 2025",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13598020",
+		"_collection_link": "https://galactic-sunset-381627.postman.co/workspace/SigaMatch-API~46f1c7bb-97e4-4a8d-b347-e98aaa76a546/collection/13598020-1d7c0434-b761-4420-9e0b-5d6c1f24c690?action=share&source=collection_link&creator=13598020"
+	},
+	"item": [
+		{
+			"name": "DOO",
+			"item": [
+				{
+					"name": "EventosPHP",
+					"item": [
+						{
+							"name": "Eventos",
+							"item": [
+								{
+									"name": "Excluir",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/eventos?id_evento=6",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"eventos"
+											],
+											"query": [
+												{
+													"key": "id_evento",
+													"value": "6"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Buscar Todos",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:8000/eventos"
+									},
+									"response": []
+								},
+								{
+									"name": "Atualizar",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id_evento\": \"11\",\r\n    \"nome\": \"Teste do Postman\",\r\n    \"data_evento\": \"2025-06-04\",\r\n    \"endereco\": \"Rua LIberdade\",\r\n    \"descricao\": \"123456789012345\",\r\n    \"max_vagas\": \"2\",\r\n    \"user_id\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:8000/eventos"
+									},
+									"response": []
+								},
+								{
+									"name": "Incluir",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMiLCJub21lIjoiVXN1YXJpbyAyIn0=.DCuRjqLXf65267GBQR0eEEr9Szf5EW3lRDWuuprYNSg=",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nome\": \"Teste do TOken na Inclusão outro user\",\r\n    \"data_evento\": \"2025-06-04\",\r\n    \"endereco\": \"Rua LIberdade\",\r\n    \"descricao\": \"123456789012345\",\r\n    \"max_vagas\": 23\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:8000/eventos"
+									},
+									"response": []
+								},
+								{
+									"name": "Buscar 1",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJub21lIjoiRGllZ28ifQ==.frJOx7z971TAxQ4+GoN6cU80/wjggkyy0cjcCds0vU8=",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "http://localhost:8000/eventos?id_evento=11",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"eventos"
+											],
+											"query": [
+												{
+													"key": "id_evento",
+													"value": "11"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "User",
+							"item": [
+								{
+									"name": "Excluir",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/user?id_user=2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"user"
+											],
+											"query": [
+												{
+													"key": "id_user",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Buscar Todos",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:8000/user"
+									},
+									"response": []
+								},
+								{
+									"name": "Atualizar",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": 2,\r\n    \"nome\": \"Usuario Dois\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:8000/user"
+									},
+									"response": []
+								},
+								{
+									"name": "Incluir",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nome\": \"Usuario 2\",\r\n    \"senha\": \"123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:8000/user"
+									},
+									"response": []
+								},
+								{
+									"name": "Buscar 1",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "http://localhost:8000/user?id_user=1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"user"
+											],
+											"query": [
+												{
+													"key": "id_user",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Login",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id_user\": 1,\r\n    \"senha\": \"123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:8000/login"
+									},
+									"response": []
+								},
+								{
+									"name": "Buscar Eventos",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJub21lIjoiRGllZ28ifQ==.frJOx7z971TAxQ4+GoN6cU80/wjggkyy0cjcCds0vU8=",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost:8000/meusEventos"
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
